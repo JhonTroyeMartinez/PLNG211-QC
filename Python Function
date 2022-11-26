@@ -1,0 +1,185 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyORR8tAriA8Tf1l43pLgPPY",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JhonTroyeMartinez/PLNG211-QC/blob/main/Python%20Function\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hQCF3OAylx81",
+        "outputId": "8f1ddb4b-c6f3-4255-a2dc-70660cfed94f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "100\n",
+            "Celsius 37.78\n",
+            "Kelvin 310.93\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Writing your own function/conversion\n",
+        "def convert_to_celsius(fahrenheit):\n",
+        "   return(fahrenheit-32) * 5 / 9\n",
+        "  \n",
+        "def convert_to_kelvin(fahrenheit):\n",
+        "  return((fahrenheit - 32) * 5 / 9) + 273.15\n",
+        "\n",
+        "fahrenheit = int(input())\n",
+        "\n",
+        "print(\"Celsius\",round(convert_to_celsius(fahrenheit),2))\n",
+        "print(\"Kelvin\",round(convert_to_kelvin(fahrenheit),2))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def name():\n",
+        "  pass"
+      ],
+      "metadata": {
+        "id": "5b5lf2bmnaz7"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def my_function(fname):\n",
+        "  return(fname + \" Martinez\")\n",
+        "print(my_function(\"Mr.\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rJ-awDI0neWC",
+        "outputId": "7242ebd6-51d2-43c7-f8a4-d50c285d4018"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mr. Martinez\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Function Exercise 1 and 2 "
+      ],
+      "metadata": {
+        "id": "GuP14cz6y40Y"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exercise 1\n",
+        "print(min(2, 3, 4))\n",
+        "print(max(2, -3, 4, 7, -5))\n",
+        "print(max(2, -3, min(4, 7), -5))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Or13yMPknqvR",
+        "outputId": "1de019be-06e1-453e-c602-c6be5d6090c7"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "7\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exercise 2\n",
+        "import math\n",
+        "\n",
+        "def average_sum(num1):\n",
+        "  return num1 + num2 + num3\n",
+        "def average_average(num1):\n",
+        "  return(num1 + num2 + num3) / 2\n",
+        "def average_squares(num1,num2,num3):\n",
+        "  return math.pow(num1,2) + math.pow(num2,2) + math.pow(num3,2)\n",
+        "#math.pow(num1,2) + math.pow(num2,2) + math.pow(num3,2)\n",
+        "#num1+num2+num3 * num1+num2+num3\n",
+        "num1 = int(input())\n",
+        "num2 = int(input())\n",
+        "num3 = int(input())\n",
+        "\n",
+        "#print(\"Sum\",round(average_sum(num1),2))\n",
+        "print(\"Sum =\",round(average_sum(num1),2))\n",
+        "print(\"Average =\",round(average_average(num1),2))\n",
+        "print(\"Squares =\",average_squares(num1,num2,num3))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KQFUgg-6obLa",
+        "outputId": "06cced27-4a9c-4033-8632-f42123ba4e3c"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "6\n",
+            "8\n",
+            "Sum = 16\n",
+            "Average = 8.0\n",
+            "Squares = 104.0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
